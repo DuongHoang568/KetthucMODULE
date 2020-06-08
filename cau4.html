@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 4</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="400" style="border:1px solid green"></canvas>
+<script>
+    let Circle = function (x, y, radius, color) {
+        this.radius = radius;
+        this.x = x;
+        this.y = y;
+        this.color = color;
+
+        this.getRadius = function() {
+            return radius;
+        };
+
+        this.render = function () {
+            let v = document.getElementById('canvas');
+            let ctx = v.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.stroke();
+        }
+    };
+
+    let circle = new Circle(10, 10, 100, "#000000");
+    circle.render();
+
+</script>
+</body>
+</html>

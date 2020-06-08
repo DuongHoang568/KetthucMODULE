@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 3 </title>
+</head>
+<body>
+<script>
+    function isFibonaci(n) {
+        let a = 0;
+        let b = 1;
+        let c;
+        for (let i = 0; i <= n ;i++){
+            a = b;
+            b = c;
+            c = a + b;
+            if (c == n){
+                return true;
+            }
+            return  false;
+        }
+
+    } document.write(isFibonaci(6));
+</script>
+</body>
+</html>
